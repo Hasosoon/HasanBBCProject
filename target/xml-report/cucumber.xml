@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="8.211">
+    <testcase classname="Status code and response time" name="TC_001 get status code and response time" time="3.649">
+        <system-out>
+            <![CDATA[Given user connects to the baseUrl..........................................passed
+When user sends GET request to the end point "ottplatform/media"............passed
+Then user verifies status code is 200.......................................passed
+And user verifies response time of the request is below 1000 milliseconds...passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Status code and response time" name="TC_002" time="1.739">
+        <system-out>
+            <![CDATA[Given user connects to the baseUrl..........................................passed
+When user sends GET request to the end point "ottplatform/media"............passed
+Then user verifies the id field is never null or empty for all fourteen items present in the data array.passed
+And user verifies the segment_type field for every track is always music....passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Status code and response time" name="TC_003" time="0.858">
+        <system-out>
+            <![CDATA[Given user connects to the baseUrl..........................................passed
+When user sends GET request to the end point "ottplatform/media"............passed
+Then user verifies the primary field in title_list is never null or empty for any track.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Status code and response time" name="TC_004" time="0.732">
+        <system-out>
+            <![CDATA[Given user connects to the baseUrl..........................................passed
+When user sends GET request to the end point "ottplatform/media"............passed
+Then user verifies that only one track in the list has now_playing field in offset as true.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Status code and response time" name="TC_005" time="0.584">
+        <system-out>
+            <![CDATA[Given user connects to the baseUrl..........................................passed
+When user sends GET request to the end point "ottplatform/media"............passed
+Then user verifies in the response headers contain Date value...............passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

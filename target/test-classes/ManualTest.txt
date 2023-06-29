@@ -1,0 +1,16 @@
+Feature: Manual Test Scenarios
+
+Scenario: Manual TC_01 (Happy path)
+    Given user connects to the "https://testapi.io/api/"
+    When user sends GET request to the end point "ottplatform/media"
+    Then user verifies that response content type is "application/json"
+
+  Scenario: Manual TC_02 (Happy path)
+    Given user connects to the "https://testapi.io/api/"
+    When user sends GET request to the end point "ottplatform/media"
+    Then user verifies that id of the first music track is "p002d79p"
+
+  Scenario: Manual TC_03 (Negative TC)
+    Given user connects to the "https://testapi.io/api/"
+    When user sends GET request to the end point "ottplatform/Media"
+    Then user verifies that endpoint is case sensitive
