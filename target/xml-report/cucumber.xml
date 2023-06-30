@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="8.211">
-    <testcase classname="Status code and response time" name="TC_001 get status code and response time" time="3.649">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="5.332">
+    <testcase classname="Status code and response time" name="TC_001 get status code and response time" time="2.172">
         <system-out>
             <![CDATA[Given user connects to the baseUrl..........................................passed
 When user sends GET request to the end point "ottplatform/media"............passed
@@ -9,7 +9,7 @@ And user verifies response time of the request is below 1000 milliseconds...pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Status code and response time" name="TC_002" time="1.739">
+    <testcase classname="Status code and response time" name="TC_002" time="1.133">
         <system-out>
             <![CDATA[Given user connects to the baseUrl..........................................passed
 When user sends GET request to the end point "ottplatform/media"............passed
@@ -18,7 +18,7 @@ And user verifies the segment_type field for every track is always music....pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Status code and response time" name="TC_003" time="0.858">
+    <testcase classname="Status code and response time" name="TC_003" time="0.717">
         <system-out>
             <![CDATA[Given user connects to the baseUrl..........................................passed
 When user sends GET request to the end point "ottplatform/media"............passed
@@ -26,7 +26,7 @@ Then user verifies the primary field in title_list is never null or empty for an
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Status code and response time" name="TC_004" time="0.732">
+    <testcase classname="Status code and response time" name="TC_004" time="0.632">
         <system-out>
             <![CDATA[Given user connects to the baseUrl..........................................passed
 When user sends GET request to the end point "ottplatform/media"............passed
@@ -34,7 +34,7 @@ Then user verifies that only one track in the list has now_playing field in offs
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Status code and response time" name="TC_005" time="0.584">
+    <testcase classname="Status code and response time" name="TC_005" time="0.445">
         <system-out>
             <![CDATA[Given user connects to the baseUrl..........................................passed
 When user sends GET request to the end point "ottplatform/media"............passed

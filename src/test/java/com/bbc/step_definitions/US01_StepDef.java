@@ -112,7 +112,7 @@ public class US01_StepDef {
     public void userVerifiesInTheResponseHeadersContainDateValue() {
         String date = String.valueOf(response.headers().get("Date"));
         System.out.println("date = " + date);
-        //Assert.assertEquals("Date=Fri, 21 May",date);
+        Assert.assertEquals("Date=Fri, 21 May",date);
         Assert.assertTrue(response.headers().hasHeaderWithName("Date"));
     }
 }
