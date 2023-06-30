@@ -6,8 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.Header;
-import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -18,7 +16,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
-public class US01_StepDef {
+public class UserStories_StepDef {
    public static Response response;
    RequestSpecification spec;
 
