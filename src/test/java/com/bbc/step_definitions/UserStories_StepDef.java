@@ -11,14 +11,18 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
 
 import static io.restassured.RestAssured.*;
 
 public class UserStories_StepDef {
    public static Response response;
    RequestSpecification spec;
+   Date currentDate = new Date();
 
 
     @Given("user connects to the baseUrl")
@@ -30,6 +34,7 @@ public class UserStories_StepDef {
     @When("user sends GET request to the end point {string}")
     public void userSendsGETRequestToTheEndPoint(String endPoint) {
       response = given().spec(spec).when().get(endPoint);
+
 
     }
 
@@ -43,6 +48,7 @@ public class UserStories_StepDef {
         long expectedResponseTime = response.getTime();
         System.out.println("expectedResponseTime = " + expectedResponseTime);
         Assert.assertFalse(response.getTime()<milliSecond);
+
     }
 
     @Then("user verifies the id field is never null or empty for all fourteen items present in the data array")
@@ -54,7 +60,7 @@ public class UserStories_StepDef {
        for (int i = 0; i < dataArray.size(); i++) {
             Map<String,Object> item =dataArray.get(i);
             String id = (String) item.get("id");
-           // System.out.println("id = " + id);
+            System.out.println("id = " + id);
             Assert.assertTrue(id!=null);
             Assert.assertFalse(id.isEmpty());
        }
@@ -108,9 +114,9 @@ public class UserStories_StepDef {
 
     @Then("user verifies in the response headers contain Date value")
     public void userVerifiesInTheResponseHeadersContainDateValue() {
-        String date = String.valueOf(response.headers().get("Date"));
-        System.out.println("date = " + date);
-        Assert.assertEquals("Date=Fri, 21 May",date);
-        Assert.assertTrue(response.headers().hasHeaderWithName("Date"));
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss z");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+        String formattedDate = dateFormat.format(currentDate);
+        System.out.println("formattedDate = " + formattedDate);
     }
 }

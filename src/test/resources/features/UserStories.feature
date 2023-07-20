@@ -3,7 +3,7 @@ Feature: Api automation testing
 
   Background:
     Given user connects to the baseUrl
-    When user sends GET request to the end point "ottplatform/media"
+    When user sends GET request to the end point "rmstest/media"
 
   Scenario: TC_001 get status code and response time
     Then user verifies status code is 200
